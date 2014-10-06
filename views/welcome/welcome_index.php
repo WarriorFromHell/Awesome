@@ -8,7 +8,7 @@
     }
 </script>
 
-
+<!--
 <p>This is the welcome controller's default view file. It is located at <code>/views/welcome/welcome_index.php</code>.</p>
 
 <h2>Examples</h2>
@@ -48,7 +48,8 @@ server by jQuery and server's response will be written to the box below.
 
 <h4>Traditional POST submit example</h4>
 <p>Here is an example how to use traditional POST to send data to the server. Click Post after filling the form. The server will invoke <code>post::index_post()</code> action (which is in <code>/controllers/posts.php</code> file) which just dumps $_POST to the screen.</p>
-<!-- Button for executing post -->
+<!-- Button for executing post
+
 <form method="post">
     <input type="text" name="foobar"/>
     <input type="submit" value="Post"/>
