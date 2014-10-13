@@ -1,8 +1,8 @@
 <?php
 
 // Project constants
-define('PROJECT_NAME', 'halo');
-define('DEFAULT_CONTROLLER', 'welcome');
+define('PROJECT_NAME', 'awesome');
+define('DEFAULT_CONTROLLER', 'products');
 define('DEBUG', false);
 
 // Load app
