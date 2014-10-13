@@ -1,3 +1,9 @@
+<?php
+define('PROJECT_NAME', 'halo');
+define('DEFAULT_CONTROLLER', 'welcome');
+define('DEBUG', false);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +14,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+
+    <?php
+    // Load app
+
+    require 'system/classes/Application.php';
+    $app = new Application;
+    ?>
 
     <title>Jumbotron Template for Bootstrap</title>
 
