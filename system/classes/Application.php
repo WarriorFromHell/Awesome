@@ -22,10 +22,10 @@ class Application
 		$this->set_base_url();
 		$this->load_config();
 		$this->process_uri();
+		$this->init_db();
 		$this->handle_routing();
 
 		$this->auth = new Auth;
-		$this->init_db();
 
 
 		// Instantiate controller
@@ -104,8 +104,8 @@ class Application
 
 
 		// Load config file or bail out
-		if (file_exists('config.php')) {
-			require 'config.php';
+		if (file_exists('config/config.php')) {
+			require 'config/config.php';
 		} else {
 			error_out('No config.php. Please make a copy of config.sample.php and name it config.php and configure it.');
 		}
@@ -126,7 +126,14 @@ class Application
 	private function handle_routing()
 	{
 		//TODO: write here your own code if you want to manipulate controller, action
-	}
+
+        // Allow shorter URLs (users/view/3 becomes users/3)
+        if( is_numeric($this->action) ){
+            $this->params[0] = $this->action;
+            $this->action = 'view';
+        }
+
+    }
 
 	private function init_db()
 	{
