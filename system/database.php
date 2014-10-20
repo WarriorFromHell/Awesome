@@ -119,7 +119,7 @@ function db_error_out()
 	// Display <pre>SQL QUERY</pre> only if it is set
 	$sql = isset($sql) ? '<pre style="text-align: left;">' . $sql . '</pre><br/>' : '';
 
-	$output = '<h2><strong style="color: red">' . $db_error . '</strong></h2><br/>' . $sql . '<p>' . $s . '</p>';
+	$output = '<h2><strong style="color: red">' . $db_error . '</strong></h2><br/>' . $sql . '<p>' . $s . '</p><pre>'.print_r(debug_backtrace(),1).'</pre>';
 
 	if (isset($_GET['ajax'])) {
 		ob_end_clean();
