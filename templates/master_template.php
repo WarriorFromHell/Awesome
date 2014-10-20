@@ -44,9 +44,9 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li class="active"><a href="#">Avaleht</a></li>
+				<li><a href="#products">Tooted</a></li>
+				<li><a href="#contacts">Kontakt</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -67,13 +67,18 @@
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
+
 </div>
+
 
 <div class="container">
 
 	<!-- Main component for a primary marketing message or call to action -->
 	<? if( !file_exists("views/$controller/{$controller}_$action.php")) error_out('The view <i>views/'. $controller . '/' .  $controller . '_' . $action . '.php</i> does not exist. Create that file.');?>
     <?  @require "views/$controller/{$controller}_$action.php"; ?>
+
+
+
 
 </div> <!-- /container -->
 
