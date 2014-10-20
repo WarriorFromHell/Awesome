@@ -45,7 +45,7 @@
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Avaleht</a></li>
-				<li><a href="#products">Tooted</a></li>
+				<li><a href="http://localhost/awesome/views/products/products_index.php">Tooted</a></li>
 				<li><a href="#contacts">Kontakt</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
