@@ -1,43 +1,58 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.12
+-- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Loomise aeg: Sept 29, 2014 kell 03:59 PM
--- Serveri versioon: 5.5.34
--- PHP versioon: 5.5.10
+-- Host: 127.0.0.1
+-- Generation Time: Oct 20, 2014 at 03:49 PM
+-- Server version: 5.6.20
+-- PHP Version: 5.5.15
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Andmebaas: `halo`
+-- Database: `awesome`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabeli struktuur tabelile `user`
+-- Table structure for table `product`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (
-  `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(25) NOT NULL,
-  `is_admin` tinyint(4) NOT NULL DEFAULT '0',
-  `password` varchar(255) NOT NULL,
-  `active` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `email` varchar(255) NOT NULL,
-  `deleted` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`user_id`),
-  UNIQUE KEY `UNIQUE` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE IF NOT EXISTS `product` (
+`product_id` int(10) unsigned NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `product_discount` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `product_image` longblob NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Andmete tõmmistamine tabelile `user`
+-- Dumping data for table `product`
 --
 
-INSERT INTO `user` (`user_id`, `username`, `is_admin`, `password`, `active`, `email`, `deleted`) VALUES
-(1, 'demo', 0, 'demo', 1, '', 0);
-SET FOREIGN_KEY_CHECKS=1;
+INSERT INTO `product` (`product_id`, `product_name`, `product_discount`, `product_image`) VALUES
+(1, 'Awesomeness 1', 1, 0x474946383761fa00c800e30000cccccc969696b1b1b19c9c9ca3a3a3bebebec5c5c5aaaaaab7b7b70000000000000000000000000000000000000000002c00000000fa00c8000004fe10c849abbd38ebcdbbff60288e64699e68aaae6cebbe702ccf746ddf78aeef7cefffc0a070482c1a8fc8a472c96c3a9fd0a8744aad5aafd8ac76cbed7abfe0b0784c2e9bcfe8b47acd6ebbdff0b87c4eafdbeff8bc7ecfeffbff808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5300203010104054ce8eaecc006e9eaf50215f5f9ea0616ef03f72ee6e90b00b082bf8206d3fd3345a0de8186eada4d18588f1f057af506b88018e0613d89fe1330aad35841640092a20a7c9420001e058707621e106051c2819107e81d60a132224b97136e9ecca96e67509c3a47154887608281912ff765782a956a809a289606682a812a4aabfcc076ad0840ac520a3d0344bd9a0101500010b9ae000920ed04b7eb26c4958097805e75724d094509e0a30001816daa2bd8b263867a7ee1d6fb30f828c1098d8d0a655c14555a841407d0a507b227617c64f379f81cd2a704d312484f806dcaea00ac144fd694fd1a2a060171fb229c9a71b7ebbabe79233f790a235dc91d0d08bc2c81ec58751aa812108a5583f3b535ad56977a5d6d298ec3bbcac58bd27ad9c91a8476ee801e35dbf2e3efbfc74eaa715e0ee2e5fe171e7cc4b9a7817f9181e7147cee059852711e58a71c6d1a4094a00669dd66c184c91d476128df45481e87cc65974f7717845892871d06509a6fa1e045dd05060c47e06698cd97817f336220637a8acd9859909c39260a3d175680d78b2502d058821001b9e03a10a178d15bfdbc15e54fff4127a526325ad99b6e411ab51f5b66fd06185e5f8659209ad68995e627100d20934c08d5e9117941da99d46ff2e527a59e77ce44c1604419d967a2668262923e144c97cf70928e2466610e0569de86b9f1d795491a3a05eaa59a3caa5aa4efacf31c660a7d999f8b636eba62a7fdb4fa9bade6e4aaebaebcf6eaebafc0062becb0c4166becb1c826abecb2cc5436ebecb3d0462bedb4d4566bedb5d866abedb6dc76ebedb7e0862beeb8e4966beeb9e8a6abeebaecb6ebeebbf0c62befbcf4d66befbdf8e6abefbefcf6ebefbf00072cf0c004176cf0c10827acf0c20c37fc6e04003b),
+(2, 'Awesomeness 2', 1, 0x474946383761fa00c800e30000cccccc969696b1b1b19c9c9ca3a3a3bebebec5c5c5aaaaaab7b7b70000000000000000000000000000000000000000002c00000000fa00c8000004fe10c849abbd38ebcdbbff60288e64699e68aaae6cebbe702ccf746ddf78aeef7cefffc0a070482c1a8fc8a472c96c3a9fd0a8744aad5aafd8ac76cbed7abfe0b0784c2e9bcfe8b47acd6ebbdff0b87c4eafdbeff8bc7ecfeffbff808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5300203010104054ce8eaecc006e9eaf50215f5f9ea0616ef03f72ee6e90b00b082bf8206d3fd3345a0de8186eada4d18588f1f057af506b88018e0613d89fe1330aad35841640092a20a7c9420001e058707621e106051c2819107e81d60a132224b97136e9ecca96e67509c3a47154887608281912ff765782a956a809a289606682a812a4aabfcc076ad0840ac520a3d0344bd9a0101500010b9ae000920ed04b7eb26c4958097805e75724d094509e0a30001816daa2bd8b263867a7ee1d6fb30f828c1098d8d0a655c14555a841407d0a507b227617c64f379f81cd2a704d312484f806dcaea00ac144fd694fd1a2a060171fb229c9a71b7ebbabe79233f790a235dc91d0d08bc2c81ec58751aa812108a5583f3b535ad56977a5d6d298ec3bbcac58bd27ad9c91a8476ee801e35dbf2e3efbfc74eaa715e0ee2e5fe171e7cc4b9a7817f9181e7147cee059852711e58a71c6d1a4094a00669dd66c184c91d476128df45481e87cc65974f7717845892871d06509a6fa1e045dd05060c47e06698cd97817f336220637a8acd9859909c39260a3d175680d78b2502d058821001b9e03a10a178d15bfdbc15e54fff4127a526325ad99b6e411ab51f5b66fd06185e5f8659209ad68995e627100d20934c08d5e9117941da99d46ff2e527a59e77ce44c1604419d967a2668262923e144c97cf70928e2466610e0569de86b9f1d795491a3a05eaa59a3caa5aa4efacf31c660a7d999f8b636eba62a7fdb4fa9bade6e4aaebaebcf6eaebafc0062becb0c4166becb1c826abecb2cc5436ebecb3d0462bedb4d4566bedb5d866abedb6dc76ebedb7e0862beeb8e4966beeb9e8a6abeebaecb6ebeebbf0c62befbcf4d66befbdf8e6abefbefcf6ebefbf00072cf0c004176cf0c10827acf0c20c37fc6e04003b);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+ ADD PRIMARY KEY (`product_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+MODIFY `product_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;SET FOREIGN_KEY_CHECKS=1;
