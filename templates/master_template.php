@@ -8,7 +8,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="assets/ico/favicon.png">
 
-	<title><?=PROJECT_NAME?></title>
+	<title>The Awesome shop</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="assets/components/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
@@ -41,30 +41,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"><?=PROJECT_NAME?></a>
+			<a class="navbar-brand" href="#">The Awesome shop</a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li class="dropdown-header">Nav header</li>
-						<li><a href="#">Separated link</a></li>
-						<li><a href="#">One more separated link</a></li>
-					</ul>
-				</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="../navbar/">Default</a></li>
-				<li><a href="../navbar-static-top/">Static top</a></li>
-				<li class="active"><a href="./">Fixed top</a></li>
+				<li <?=$controller == 'welcome' ? 'class="active"' : ''?>><a href="welcome">Eripakkumised</a></li>
+				<li <?=$controller == 'about' ? 'class="active"' : ''?>><a href="about">Poest</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>

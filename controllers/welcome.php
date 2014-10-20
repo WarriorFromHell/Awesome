@@ -3,7 +3,7 @@
 class welcome extends Controller{
 
 	function index(){
-		$this->users = get_all("SELECT * FROM user");
+		$this->discounts = get_all("SELECT * FROM product WHERE product_discount=1");
 	}
 
     function index_ajax(){

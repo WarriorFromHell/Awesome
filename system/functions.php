@@ -38,3 +38,6 @@ function debug($msg)
 	$line = debug_backtrace()[0]['line'];
 	echo "[" . $file . ":" . $line . "] <b>" . $msg . "</b>";
 }
+function getDataURI($image, $mime = 'image/gif') {
+    return 'data: '.$mime.';base64,'.base64_encode($image);
+}
