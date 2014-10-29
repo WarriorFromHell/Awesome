@@ -1,13 +1,23 @@
-<? foreach ($products as $product): ?>
-    <div class="span8">
-        <h1><a href="<?= BASE_URL ?>posts/view/<?= $product['product_id'] ?>"><?= $product['product_name'] ?></a></h1>
+<style>
+    .products * {
+        margin-top: 0 !important;
+    }
+</style>
+<h1>
+    Tooted
+</h1>
+<div class="products">
 
-        <p><?= $product['product_text'] ?></p>
+    <div class="row">
+        <? foreach ($products as $product): ?>
+            <div class="well pull-left" style="width:290px;margin:15px">
+                <h2><?= $product['product_name'] ?></h2>
 
-    <? foreach ($tags[$post['post_id']] as $tag): ?>
-            <a href="tags/view/<?= $tag['tag_name'] ?>">
-                <span class="label" style="background-color: #5bc0de"><?= $tag ?></span>
-            </a> <? endforeach ?>
-
+                <p><?= $product['product_description'] ?></p><img src="<?= getDataURI($product['product_image']) ?>"
+                                                                   alt=""/>
+            </div>
+        <? endforeach ?>
     </div>
-<? endforeach ?>
+</div>
+
+

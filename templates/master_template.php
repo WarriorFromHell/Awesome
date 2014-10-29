@@ -46,6 +46,7 @@
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li <?=$controller == 'welcome' ? 'class="active"' : ''?>><a href="welcome">Eripakkumised</a></li>
+                <li <?=$controller == 'products' ? 'class="active"' : ''?>><a href="products">Tooted</a></li>
 				<li <?=$controller == 'about' ? 'class="active"' : ''?>><a href="about">Poest</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
