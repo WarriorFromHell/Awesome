@@ -97,49 +97,36 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">×</button>
-                <h3 class="modal-title">Heading</h3>
+                <h3 class="modal-title">Get ReKt!</h3>
             </div>
             <div class="modal-body">
 
 
-                <form role="form" class="form-horizontal" method="post" action="tests/<?= $test['test_id'] ?>">
+
+
+                <form role="form" method="post">
                     <div class="form-group">
-                        <label class="col-sm-5 control-label" for="test_name">Nimi</label>
-
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="data[test_name]" id="test_name"
-                                   placeholder="" value="<?= $test['test_name'] ?>">
-
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label class="col-sm-5 control-label" for="test_min_score">Aadress</label>
-
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="data[test_min_score]" id="test_min_score" placeholder="Valga Pipra 7"
-                                   value="<?= $test['test_min_score'] ?>">
-                        </div>
+                        <label for="exampleInputName">Nimi *</label>
+                        <input type="text" class="form-control" id="exampleInputName" placeholder="Sinu nimi..."
+                               name="data[email_name]">
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-5 control-label" for="person_id">Telefoni number</label>
-
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="data[person_name]" id="person_id" placeholder="372"
-                                   value="<?= $test['person_name'] ?>"> <input type="hidden" class="form-control"
-                                                                               name="data[person_id]" id="person_id"
-                                                                               value="<?= $test['person_id'] ?>">
-                        </div>
+                        <label for="exampleInputEmail">Email *</label>
+                        <input type="email" class="form-control" id="exampleInputName" placeholder="Sinu email..."
+                               name="data[email_email]">
                     </div>
-
                     <div class="form-group">
-                        <label class="col-sm-5 control-label" for="lecture_id">Ostu soov</label>
-
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="data[lecture_id]" id="lecture_id" placeholder="GTA V"
-                                   value="<?= $test['lecture_id'] ?>">
-                        </div>
+                        <label for="exampleInputNumber">Telefoninumber *</label>
+                        <input type="text" class="form-control" id="exampleInputNumber" placeholder="Sinu telefoninumber..."
+                               name="data[email_phone]">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputText">Sõnum *</label>
+                        <input type="text" class="form-control" id="exampleInputText" placeholder="Sinu sõnum..."
+                               style="min-height:100px" name="data[email_message]">
+                    </div>
+                    <button type="submit" class="btn btn-default">Saada</button>
+                </form>
                     </div>
 
 

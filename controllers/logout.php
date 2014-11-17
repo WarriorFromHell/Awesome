@@ -11,4 +11,5 @@ class logout extends Controller {
 		session_destroy();
 		header('Location: '.BASE_URL);
 	}
-} 
+}
+
