@@ -1,3 +1,11 @@
+<style>
+    .row  {
+        padding: 0px 8px 20px 8px;
+    }
+    .content-wrapper {
+        border-radius: 3px;
+    }
+</style>
 <div class="container-fluid">
     <div class="content-wrapper">
 

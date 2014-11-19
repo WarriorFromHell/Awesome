@@ -19,8 +19,12 @@
 			min-height: 2000px !important;
 			padding-top: 70px;
 		}
+        h1 {
+            color: white;
+        }
 	</style>
 
+    <link rel="stylesheet" href="assets/css/videobg.css"/>
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -49,12 +53,19 @@
                 <li <?=$controller == 'products' ? 'class="active"' : ''?>><a href="products">Tooted</a></li>
 				<li <?=$controller == 'about' ? 'class="active"' : ''?>><a href="about">Poest</a></li>
 			</ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="<?=BASE_URL?><?=$auth->logged_in == true? 'logout':'login'?>"><?=$auth->logged_in == true? 'Logout':'Login'?></a></li>
+            </ul>
 		</div><!--/.nav-collapse -->
 	</div>
 </div>
 
 <div class="container">
 
+    <video autoplay loop muted class="bgvideo" id="bgvideo">
+        <source src="./assets/video/videobg.webm" type="video/webm">
+    </video>
 	<!-- Main component for a primary marketing message or call to action -->
 	<? if( !file_exists("views/$controller/{$controller}_$action.php")) error_out('The view <i>views/'. $controller . '/' .  $controller . '_' . $action . '.php</i> does not exist. Create that file.');?>
     <?  @require "views/$controller/{$controller}_$action.php"; ?>
