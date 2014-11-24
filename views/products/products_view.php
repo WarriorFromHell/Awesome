@@ -116,23 +116,29 @@
                     <div class="form-group">
                         <label for="exampleInputName">Nimi *</label>
                         <input type="text" class="form-control" id="exampleInputName" placeholder="Sinu nimi..."
-                               name="data[email_name]">
+                               name="data[customer_name]">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail">Email *</label>
                         <input type="email" class="form-control" id="exampleInputName" placeholder="Sinu email..."
-                               name="data[email_email]">
+                               name="data[customer_email]">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputNumber">Telefoninumber *</label>
                         <input type="text" class="form-control" id="exampleInputNumber" placeholder="Sinu telefoninumber..."
-                               name="data[email_phone]">
+                               name="data[customer_number]">
+                    </div>                    <div class="form-group">
+                        <label for="exampleInputNumber">Aadress *</label>
+                        <input type="text" class="form-control" id="exampleInputNumber" placeholder="Aadress"
+                               name="data[customer_address]">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputText">Sõnum *</label>
                         <input type="text" class="form-control" id="exampleInputText" placeholder="Sinu sõnum..."
-                               style="min-height:100px" name="data[email_message]">
+                               style="min-height:100px" name="data[customer_message]">
                     </div>
+                    <input type="hidden" value="<?= $product['product_id']?>" name="data[product_id]"/>
+                    <input type="hidden" value="<?= $product['product_price']?>" name="data[product_price]"/>
                     <button type="submit" class="btn btn-default">Saada</button>
                 </form>
                     </div>
