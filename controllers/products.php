@@ -26,6 +26,7 @@ class products extends Controller
         $message = '<pre>' . print_r($data, 1) . '<pre>';
         $message .= $data['email_message'];
         echo "<pre>";
+        insert $data;
         send_mail(EMAIL_EMAIL, EMAIL_NAME, $data['email_email'], $data['email_name'], "Uus sõnum veebilehelt", $message);
         echo "</pre>";
     }
