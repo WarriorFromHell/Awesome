@@ -19,9 +19,9 @@
 			min-height: 2000px !important;
 			padding-top: 70px;
 		}
-        h1 {
+        /*h1 {
             color: white;
-        }
+        }*/
 	</style>
 
     <link rel="stylesheet" href="assets/css/videobg.css"/>
@@ -63,9 +63,11 @@
 
 <div class="container">
 
+    <!--
     <video autoplay loop muted class="bgvideo" id="bgvideo">
         <source src="./assets/video/videobg.webm" type="video/webm">
     </video>
+    -->
 	<!-- Main component for a primary marketing message or call to action -->
 	<? if( !file_exists("views/$controller/{$controller}_$action.php")) error_out('The view <i>views/'. $controller . '/' .  $controller . '_' . $action . '.php</i> does not exist. Create that file.');?>
     <?  @require "views/$controller/{$controller}_$action.php"; ?>
