@@ -15,7 +15,7 @@
 
 <table class="table">
     <tr class="bold">
-        <? foreach ($orders as $order): ?>
+
 
             <td>Nimi</td>
             <td>Aadress</td>
@@ -25,8 +25,9 @@
             <td>Hind</td>
 
 
-        <? endforeach ?>
+
     </tr>
+    <? foreach ($orders as $order): ?>
     <tr>
 
         <td><?= $order['customer_name'] ?></td>
@@ -37,4 +38,7 @@
         <td><?= $order['product_price'] ?></td>
 
     </tr>
+    <? endforeach ?>
+
+
 </table>

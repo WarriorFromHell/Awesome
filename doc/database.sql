@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Nov 24, 2014 kell 10:51 EL
+-- Loomise aeg: Nov 26, 2014 kell 11:00 EL
 -- Serveri versioon: 5.6.16
 -- PHP versioon: 5.5.11
 
@@ -32,14 +32,15 @@ CREATE TABLE IF NOT EXISTS `order` (
   `product_id` int(11) NOT NULL,
   `product_price` int(11) NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=7 ;
 
 --
 -- Andmete tõmmistamine tabelile `order`
 --
 
 INSERT INTO `order` (`order_id`, `customer_email`, `customer_address`, `customer_name`, `customer_number`, `customer_message`, `product_id`, `product_price`) VALUES
-  (1, 'something@email.com', 'jaanusemaja 2', 'Maja Jaanusk', '5656589', '', 2, 50);
+  (1, 'something@email.com', 'jaanusemaja 2', 'Maja Jaanusk', '5656589', '', 2, 50),
+  (6, 'kaido@hot.ee', 'poole tunni', 'Kaido', '44464644664', 'asdasdasdasdadsasd', 2, 50);
 
 -- --------------------------------------------------------
 
