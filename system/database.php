@@ -71,7 +71,7 @@ function get_one($sql, $debug = FALSE)
 function get_all($sql)
 {
     global $db;
-    var_dump($sql);
+
     $q = mysqli_query($db, $sql) or db_error_out();
     while (($result[] = mysqli_fetch_assoc($q)) || array_pop($result)) {
         ;
