@@ -9,6 +9,6 @@ class orders extends Controller {
     public $requires_auth = true;
     function index()
     {
-        $this->orders = get_all("SELECT * FROM `order`");
+        $this->orders = get_all("SELECT * FROM `order` NATURAL JOIN product");
     }
 }

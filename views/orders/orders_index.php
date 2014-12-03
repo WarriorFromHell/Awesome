@@ -34,7 +34,7 @@
         <td><?= $order['customer_address'] ?></td>
         <td><?= $order['customer_email'] ?></td>
         <td><?= $order['customer_number'] ?></td>
-        <td><?= $order['product_id'] ?></td>
+        <td><?= $order['product_name'] ?></td>
         <td><?= $order['product_price'] ?></td>
 
     </tr>
