@@ -112,7 +112,7 @@
 
 
 
-                <form role="form" method="post">
+                <form role="form" method="post" action="products/buy/<?= $product['product_id'] ?>">
                     <div class="form-group">
                         <label for="exampleInputName">Nimi *</label>
                         <input type="text" class="form-control" id="exampleInputName" placeholder="Sinu nimi..."
@@ -139,7 +139,8 @@
                     </div>
                     <input type="hidden" value="<?= $product['product_id']?>" name="data[product_id]"/>
                     <input type="hidden" value="<?= $product['product_price']?>" name="data[product_price]"/>
-                    <button type="submit" class="btn btn-default">Saada</button>
+                    <button type="submit" class="btn btn-success">
+                        Ipizza Testpank                        </button>
                 </form>
                     </div>
 
