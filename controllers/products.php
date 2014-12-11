@@ -62,7 +62,7 @@ OZi5kSsBExGTi5nIUaUSQkhKpUR4anGOq2f0XRm5+Y+D9WifKu+2LdEwh4F9Uu69
             "VK_DATETIME" => date("Y-m-d\TH:i:s+0200"),
             "VK_ENCODING" => "utf-8",
         );
-        print_r($customer);
+
         $data = str_pad (mb_strlen($fields["VK_SERVICE"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_SERVICE"] .    /* 1011 */
             str_pad (mb_strlen($fields["VK_VERSION"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_VERSION"] .    /* 008 */
             str_pad (mb_strlen($fields["VK_SND_ID"], "UTF-8"),  3, "0", STR_PAD_LEFT) . $fields["VK_SND_ID"] .     /* uid517797 */
