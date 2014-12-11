@@ -1,4 +1,4 @@
-
+<h1>Liigume panka!</h1>
 <form class="myform" method="post" action="https://pangalink.net/banklink/ipizza" name="bank_signup">
             <!-- include all values as hidden form fields -->
 <?php foreach($fields as $key => $val):?>
