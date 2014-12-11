@@ -1,5 +1,5 @@
 
-<form method="post" action="https://pangalink.net/banklink/ipizza">
+<form method="post" action="https://pangalink.net/banklink/ipizza" name="bank_signup">
             <!-- include all values as hidden form fields -->
 <?php foreach($fields as $key => $val):?>
     <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($val); ?>" />
@@ -18,3 +18,9 @@
     <tr><td colspan="2"><input type="submit" value="Pay" /></td></tr>
 </table>
 </form>
+<script>
+    window.onload = function(){
+        document.forms['bank_signup'].submit()
+
+    }
+</script>

@@ -15,4 +15,7 @@ class orders extends Controller {
         $order_id=$this->params[0];
         update('order',['order_paid'=>1],"order_id=$order_id");
     }
+    function view(){
+
+    }
 }
