@@ -168,7 +168,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputNumber">Telefoninumber *</label>
-                        <input type="number" class="form-control" id="Phone"
+                        <input type="text" class="form-control" id="Phone"
                                placeholder="Sinu telefoninumber..."
                                name="data[customer_number]" required>
                     </div>
