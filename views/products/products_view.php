@@ -23,13 +23,13 @@
         border-radius: 3px;
     }
 
-    #commentForm {
+    #buy-order {
         width: 500px;
     }
-    #commentForm label {
+    #buy-order label {
         width: 250px;
     }
-    #commentForm label.error, #commentForm input.submit {
+    #buy-order label.error, #buy-order input.submit {
         margin-left: 253px;
     }
 </style>
@@ -155,7 +155,7 @@
             <div class="modal-body">
 
 
-                <form class="cmxform" id="commentForm" role="form" method="post" action="products/buy/<?= $product['product_id'] ?>">
+                <form class="cmxform" id="buy-order" role="form" method="post" action="products/buy/<?= $product['product_id'] ?>">
                     <div class="form-group">
                         <label for="exampleInputName">Nimi *</label>
                         <input type="text" class="form-control" id="Name" placeholder="Sinu nimi..."
@@ -213,18 +213,18 @@
 </div>
 
 
-<script src="./assets/js/jquery-1.10.2.min.js"></script>
+
 <script src="./assets/js/jquery-validate.js"></script>
 <script>
     $.validator.setDefaults({
         submitHandler: function() {
-            alert("submitted!");
+            $( "#buy-order" ).submit();
         }
     });
 
     $().ready(function() {
         // validate the comment form when it is submitted
-        $("#commentForm").validate();
+        $("#buy-order").validate();
 
     });
 </script>
